@@ -1252,10 +1252,23 @@ img {
 
 /* Adaptive tablet */
 
+@media screen and (max-width: 1439px){
+    .container{width: 728px;
+    }
+}
+
 @media screen and (min-width: 768px){
     .page-header .container {
         display: flex;
         align-items: center;
+    }
+        
+    .header-logo{
+        margin: 0;
+    }
+
+    .page-nav {
+        justify-content: space-around;
     }
 
   .menu-button{
@@ -1326,7 +1339,7 @@ img {
   .current::after {
       display: block;
       position: absolute;
-      top: 45px;
+      top: 50px;
       left: 0;
 
       opacity: 1;
@@ -1337,7 +1350,31 @@ img {
 
       background-color: var(--primary-focus-hover-clr);
       border-radius: 2px;
+  }
 
+  .menu-container-is-hedden{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+
+    margin-left: 120px;
+  }
+
+  .address-list {
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      margin-left: 120px;
+  }
+
+  .address-item:last-child{
+    margin-top: 12px;
+  }
+
+  .contact{
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
   }
 }
 
