@@ -15,58 +15,90 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
-    <link
-      rel="stylesheet"
-      href="./css/mobile.css"
-      media="screen and (max-width:767px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/tablet.css"
-      media="screen and (min-width:768px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/mobile.css"
-      media="screen and (min-width:1158px)"
-    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- header -->
     <header class="page-header">
       <div class="container">
-        <nav class="page-nav">
-          <a class="header-logo link" href="./index.html"
-            >Web<span class="header-web-logo">Studio</span></a
-          >
-          <ul class="menu list">
-            <li class="menu-item">
-              <a class="menu-link link" href="./index.html">Studio</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link link current" href="./portfolio.html"
-                >Portfolio</a
-              >
-            </li>
-            <li class="menu-item">
-              <a class="menu-link link" href="">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="address">
-          <ul class="address-list list">
-            <li class="address-item">
-              <a class="contact link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="address-item">
-              <a class="contact link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <div class="menu-container">
+          <nav class="page-nav">
+            <a class="header-logo link" href="./index.html"
+              >Web<span class="header-web-logo">Studio</span></a
+            >
+            <button class="menu-button" aria-expanded="false" type="button">
+              <svg width="32px" height="32px" aria-label="Mobile menu switch">
+                <use
+                  class="icon-cross .js-close-menu"
+                  href="./images/icons.svg#icon-close-black-18dp"
+                ></use>
+                <use
+                  class="icon-menu .js-open-menu"
+                  href="./images/icons.svg#icon-menu"
+                ></use>
+              </svg>
+            </button>
+            <div class="menu-container-is-hedden js-menu-container">
+              <ul class="menu list">
+                <li class="menu-item">
+                  <a class="menu-link link" href="./index.html">Studio</a>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link link current" href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link link" href="">Contacts</a>
+                </li>
+              </ul>
+              <address class="address">
+                <ul class="address-list list">
+                  <li class="address-item">
+                    <a class="contact link" href="tel:+110001111111"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                  <li class="address-item">
+                    <a class="contact link" href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+                <ul class="social-link-list list">
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
