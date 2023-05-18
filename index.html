@@ -26,20 +26,28 @@
             <a class="header-logo link" href="./index.html"
               >Web<span class="header-web-logo">Studio</span></a
             >
-            <button class="menu-button" aria-expanded="false" type="button">
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              type="button"
+            >
               <svg width="32px" height="32px" aria-label="Mobile menu switch">
                 <use
-                  class="icon-cross .js-close-menu"
-                  href="./images/icons.svg#icon-close-black-18dp"
-                ></use>
-                <use
-                  class="icon-menu .js-open-menu"
+                  class="icon-menu"
                   href="./images/icons.svg#icon-menu"
                 ></use>
               </svg>
             </button>
-            <div class="menu-container-is-hedden js-menu-container">
-              <ul class="menu list">
+            <div class="menu js-menu-container" id="mobile-menu">
+              <button class="menu-toggle js-close-menu" type="button">
+                <svg width="24" height="24">
+                  <use
+                    class="icon-cross"
+                    href="./images/icons.svg#icon-close-btn"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="menu-list list">
                 <li class="menu-item">
                   <a class="menu-link link current" href="./index.html"
                     >Studio</a
@@ -524,9 +532,9 @@
     <!-- Backdrop -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" data-modal-close type="button">
-          <svg class="close-btn" width="8" height="8">
-            <use href="./images/icons.svg#icon-close-black-18dp"></use>
+        <button class="menu-toggle" data-modal-close type="button">
+          <svg class="close-btn" width="24" height="24">
+            <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
         </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
