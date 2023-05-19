@@ -26,25 +26,35 @@
             <a class="header-logo link" href="./index.html"
               >Web<span class="header-web-logo">Studio</span></a
             >
-            <button class="menu-button" aria-expanded="false" type="button">
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              type="button"
+            >
               <svg width="32px" height="32px" aria-label="Mobile menu switch">
                 <use
-                  class="icon-cross .js-close-menu"
-                  href="./images/icons.svg#icon-close-black-18dp"
-                ></use>
-                <use
-                  class="icon-menu .js-open-menu"
+                  class="icon-menu"
                   href="./images/icons.svg#icon-menu"
                 ></use>
               </svg>
             </button>
-            <div class="menu-container-is-hedden js-menu-container">
-              <ul class="menu list">
+            <div class="menu js-menu-container" id="mobile-menu">
+              <button class="menu-toggle js-close-menu" type="button">
+                <svg width="24" height="24">
+                  <use
+                    class="icon-cross"
+                    href="./images/icons.svg#icon-close-btn"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="menu-list list">
                 <li class="menu-item">
-                  <a class="menu-link link" href="./index.html">Studio</a>
+                  <a class="menu-link link current" href="./index.html"
+                    >Studio</a
+                  >
                 </li>
                 <li class="menu-item">
-                  <a class="menu-link link current" href="./portfolio.html"
+                  <a class="menu-link link" href="./portfolio.html"
                     >Portfolio</a
                   >
                 </li>
@@ -127,6 +137,18 @@
             <li class="filters-item">
               <a class="link" href="">
                 <div class="box-img">
+                  <img
+                    class="filters-img"
+                    srcset="
+                      ./images/portfolio-img/banking-app-360.jpg    360w,
+                      ./images/portfolio-img/banking-app-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/banking-app-360.jpg"
+                    alt="Banking App"
+                    max-width="360"
+                    height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
+                  />
                   <div class="overflow-box">
                     <p class="overflow-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -134,14 +156,6 @@
                       App · Cloud Storage App
                     </p>
                   </div>
-                  <img
-                    class="filters-img"
-                    srcset=""
-                    src="./images/banking-app.jpg"
-                    alt="Banking App"
-                    width="360"
-                    height="300"
-                  />
                 </div>
                 <div class="info">
                   <h2 class="filters-text">Banking App Interface Concept</h2>
@@ -154,10 +168,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/cashless-payment.jpg"
+                    srcset="
+                      ./images/portfolio-img/cashless-payment-360.jpg    360w,
+                      ./images/portfolio-img/cashless-payment-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/cashless-payment-360.jpg"
                     alt="Cashless Payment"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -179,10 +198,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/meditation-app.jpg"
+                    srcset="
+                      ./images/portfolio-img/meditation-app-360.jpg    360w,
+                      ./images/portfolio-img/meditation-app-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/meditation-app-360.jpg"
                     alt="Meditation App"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -204,10 +228,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/taxi-service.jpg"
+                    srcset="
+                      ./images/portfolio-img/taxi-service-360.jpg    360w,
+                      ./images/portfolio-img/taxi-service-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/taxi-service.jpg"
                     alt="Taxi Service"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -229,10 +258,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/screen-illustrations.jpg"
+                    srcset="
+                      ./images/portfolio-img/screen-illustrations-360.jpg    360w,
+                      ./images/portfolio-img/screen-illustrations-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/screen-illustrations-360.jpg"
                     alt="Screen Illustrations"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -254,10 +288,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/online-courses.jpg"
+                    srcset="
+                      ./images/portfolio-img/online-courses-360.jpg    360w,
+                      ./images/portfolio-img/online-courses-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/online-courses-360.jpg"
                     alt="Online Courses"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -279,10 +318,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/instagram-stories.jpg"
+                    srcset="
+                      ./images/portfolio-img/instagram-stories-360.jpg    360w,
+                      ./images/portfolio-img/instagram-stories-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/instagram-stories.jpg"
                     alt="Instagram Stories"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -304,10 +348,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/organic-food.jpg"
+                    srcset="
+                      ./images/portfolio-img/organic-food-360.jpg    360w,
+                      ./images/portfolio-img/organic-food-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/organic-food.jpg"
                     alt="Organic Food"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -329,10 +378,15 @@
                 <div class="box-img">
                   <img
                     class="filters-img"
-                    src="./images/fresh-coffee.jpg"
+                    srcset="
+                      ./images/portfolio-img/fresh-coffee-360.jpg    360w,
+                      ./images/portfolio-img/fresh-coffee-720@2x.jpg 720w
+                    "
+                    src="./images/portfolio-img/fresh-coffee.jpg"
                     alt="Coffee"
                     width="360"
                     height="300"
+                    sizes="(min-width: 768px) 50vw, (min-width: 1158px) 33vw"
                   />
                   <div class="overflow-box">
                     <p class="overflow-text">
@@ -361,9 +415,8 @@
             >Web<span class="footer-web-logo">Studio</span></a
           >
           <p class="footer-text">
-            Increase the flow of customers and <br />
-            sales for your business with digital <br />
-            marketing & growth solutions.
+            Increase the flow of customers and sales for your business with
+            digital marketing & growth solutions.
           </p>
         </div>
         <div class="social-media">
@@ -398,6 +451,23 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="subscrabe">
+          <p class="subscrabe-text">Subscrabe</p>
+          <form autocomplete="off">
+            <input
+              class="footer-input"
+              type="email"
+              name="mail"
+              placeholder="E-mail"
+            />
+            <button class="subscrabe-btn" type="button">
+              Subscrabe
+              <svg class="subscrabe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

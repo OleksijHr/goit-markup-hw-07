@@ -1059,6 +1059,8 @@ img {
 .btn-filters-list {
     display: flex;
     justify-content: center;
+
+    column-gap: 24px;
 }
 
 .filters-btn {
@@ -1335,7 +1337,6 @@ img {
 
     .btn-filters-list {
         row-gap: 16px;
-        column-gap: 24px;
         margin-bottom: 48px;
 
         flex-wrap: wrap;
@@ -1512,6 +1513,24 @@ img {
     .customers-item {
         width: 168px;
     }
+
+
+
+    /* portfolio page */
+
+    .btn-filters-list{
+        margin-bottom: 64px;
+    }
+
+    .filters-list {
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
+    .filters-item{
+        width: 356px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
@@ -1542,10 +1561,6 @@ img {
         column-gap: 24px;
         row-gap: 72px;
     }
-
-    .features-item {
-        width: 356px;
-    }
 }
 
 
@@ -1557,6 +1572,7 @@ img {
 
     .menu {
         margin-left: 76px;
+        justify-content: space-between;
     }
 
     .current::after {
