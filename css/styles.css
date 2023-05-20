@@ -1179,7 +1179,7 @@ img {
 
 
 .filters-img {
-    /* width: 100%; */
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1353,10 +1353,6 @@ img {
     .overflow-box {
         display: none;
     }
-
-    .filters-img {
-        width: 100%;
-    }
 }
 
 
@@ -1455,7 +1451,6 @@ img {
     .menu {
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
 
     .contact {
@@ -1577,6 +1572,10 @@ img {
 
     .current::after {
         top: 43px;
+    }
+
+    .address{
+        margin-left: 332px;
     }
 
     .address-list {
