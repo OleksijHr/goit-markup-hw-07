@@ -85,12 +85,6 @@ img {
     padding-right: 15px;
 }
 
-/* @media screen and (max-width: 767px) {
-    .container {
-        width: 428px;
-    }
-} */
-
 @media screen and (min-width: 428px){
     .container{
         max-width: 428px;
@@ -156,6 +150,9 @@ img {
     color: inherit;
 }
 
+
+
+
 /* header */
 .page-header {
     border-bottom: 1px solid var(--accent-clr);
@@ -175,8 +172,6 @@ img {
 
 .header-logo {
     display: block;
-    /* align-content: center;
-    margin-right: 76px; */
 
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -190,10 +185,6 @@ img {
 .header-web-logo {
     color: var(--primary-text-dark-clr);
 }
-
-/* .menu{
-    margin-bottom: 284px;
-} */
 
 .menu-toggle {
     position: absolute;
@@ -255,16 +246,6 @@ img {
     font-style: normal;
 }
 
-.address-item {
-    /* padding-bottom: 40px;
-
-    text-align: center; */
-}
-
-.address-item:last-child {
-    /* padding-bottom: 48px; */
-}
-
 .contact {
     color: var(--primary-text-clr);
     font-family: 'Roboto';
@@ -301,6 +282,7 @@ img {
     align-items: center;
     justify-content: center;
 }
+
 
 
 /* footer */
@@ -481,6 +463,10 @@ img {
     }
 }
 
+
+
+
+
 /* hero */
 
 .hero {
@@ -587,17 +573,6 @@ img {
 
 /* Features */
 
-/* .features{} */
-
-.features-list {
-    /* display: flex;
-    gap: 24px; */
-}
-
-.features-item {
-    /* width: calc((100%-72px)/4); */
-}
-
 .icon-box {
     margin-bottom: 8px;
 
@@ -636,6 +611,9 @@ img {
     color: var(--primary-text-clr);
 }
 
+
+
+
 /* work options */
 
 @media screen and (max-width: 1157px) {
@@ -647,6 +625,8 @@ img {
         display: none;
     }
 }
+
+
 
 
 /* team */
@@ -666,11 +646,6 @@ img {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--primary-text-dark-clr);
-}
-
-.team-list {
-    /* display: flex;
-    gap: 24px; */
 }
 
 .team-item {
@@ -725,6 +700,8 @@ img {
 }
 
 
+
+
 /* customers */
 
 .customers {}
@@ -753,7 +730,6 @@ img {
 }
 
 .customers-item {
-    /* width: calc((100% - 16px) / 2); */
     height: 88px;
 }
 
@@ -780,6 +756,8 @@ img {
 .customers-icon {
     fill: currentColor;
 }
+
+
 
 
 
@@ -944,8 +922,6 @@ img {
 .application-input:not(:placeholder-shown)+.application-lable-comment {
     transform: translate(1px, -16px);
     color: var(--primary-brand-clr);
-
-
 }
 
 .application-input:hover~.input-icon,
@@ -1052,7 +1028,12 @@ img {
 }
 
 
+
+
+
 /* Portfolio page */
+
+
 
 /* filters */
 
@@ -1100,21 +1081,14 @@ img {
     background: var(--primary-focus-hover-clr);
 }
 
+
+
+
 /* Filters list */
 
 .filters-list {
     display: flex;
-    /* flex-direction: column; */
-    /* flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px; */
     justify-content: center;
-}
-
-
-.filters-item {
-    /* width: calc((100% - 48px) / 3); */
-    /* margin-bottom: 48px; */
 }
 
 .filters-item>.link {
@@ -1138,7 +1112,6 @@ img {
 .overflow-box {
     position: absolute;
     display: inline-block;
-    /* display: none; */
     content: '';
     width: 100%;
     height: 100%;
@@ -1208,7 +1181,12 @@ img {
 }
 
 
+
+
+
 /* Adaptive mobile */
+
+
 
 /* header */
 @media screen and (max-width: 767px) {
@@ -1278,6 +1256,8 @@ img {
     }
 
 
+
+
     /* hero */
 
     .hero.section {
@@ -1295,6 +1275,8 @@ img {
         text-transform: capitalize;
     }
 
+
+
     /* features */
 
     .features-item:not(:last-child) {
@@ -1304,6 +1286,7 @@ img {
     .features-name {
         text-align: center;
     }
+
 
 
     /* team */
@@ -1318,6 +1301,7 @@ img {
     }
 
 
+
     /* customers */
 
     .customers-list{
@@ -1327,6 +1311,7 @@ img {
     .customers-item {
         width: 190px;
     }
+
 
 
     /* portfolio adaptive */
@@ -1460,6 +1445,8 @@ img {
         letter-spacing: 0.04em;
     }
 
+
+
     /* hero */
 
     .hero-title {
@@ -1475,11 +1462,14 @@ img {
     }
 
 
+
     /* features */
 
     .features-list {
         display: flex;
     }
+
+
 
     /* team */
 
@@ -1495,6 +1485,7 @@ img {
     .team-item {
         width: 264px;
     }
+
 
 
     /* customers */
@@ -1559,9 +1550,13 @@ img {
 }
 
 
+
+
+
 /* Adaptive desktop */
 
 @media screen and (min-width: 1158px) {
+
 
     /*header  */
 
@@ -1592,6 +1587,8 @@ img {
         letter-spacing: 0.02em;
     }
 
+
+
     /* footer */
 
     .footer {
@@ -1619,12 +1616,16 @@ img {
         margin-left: 80px;
     }
 
+
+
     /* hero */
 
     .hero {
         padding-top: 188px;
         padding-bottom: 188px;
     }
+
+
 
     /* features */
 
@@ -1646,6 +1647,8 @@ img {
         line-height: 1.2;
     }
 
+
+    
     /* work options */
 
     .work {
