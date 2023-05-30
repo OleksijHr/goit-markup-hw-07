@@ -32,6 +32,7 @@ html {
     --primary-font-size: 16px;
     --primary-line-height: 1.5;
     --primary-border-radius: 4px;
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -60,7 +61,7 @@ img {
     height: auto;
 }
 
-/* utility */
+/* =====================   Utility  =================== */
 
 .list {
     margin: 0;
@@ -137,7 +138,7 @@ img {
     fill: var(--primary-brand-clr);
     background-color: var(--primary-brand-clr);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition);
 }
 
 .social-link-item>.link:hover,
@@ -153,7 +154,7 @@ img {
 
 
 
-/* header */
+/* ==========================   Header   ========================= */
 .page-header {
     border-bottom: 1px solid var(--accent-clr);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -163,9 +164,6 @@ img {
 
 .menu-container {
     position: relative;
-}
-
-.page-nav {
     display: flex;
     align-items: center;
 }
@@ -204,8 +202,8 @@ img {
 
     fill: var(--lingt-bg-clr);
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition),
+        background-color var(--transition);
 }
 
 @media screen and (min-width: 768px){
@@ -232,7 +230,11 @@ img {
 .menu-link {
     color: var(--primary-text-dark-clr);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition);
+}
+
+.menu.is-open .menu-list .menu-item .current{
+    color: var(--primary-focus-hover-clr);
 }
 
 .menu-link:hover,
@@ -255,7 +257,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition);
 }
 
 .contact:hover,
@@ -267,6 +269,12 @@ img {
     display: flex;
     justify-content: center;
     gap: 24px;
+}
+
+@media screen and (min-width: 468px) and (max-width: 767px){
+    .address .social-link-list{
+        gap: 56px;
+    }
 }
 
 .social-link-item {
@@ -285,7 +293,7 @@ img {
 
 
 
-/* footer */
+/* ============================   Footer   ============================= */
 
 .footer {
     padding-top: 97px;
@@ -323,10 +331,6 @@ img {
 
     color: var(--secondary--inverted-text-clr);
     background: var(--primary-text-dark-clr);
-}
-
-.social-media {
-    margin-bottom: 72px;
 }
 
 .social-media-text {
@@ -399,7 +403,7 @@ img {
     color: var(--primary-inverted-text-clr);
     background-color: var(--primary-brand-clr);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition);
 }
 
 .subscrabe-btn:hover,
@@ -417,8 +421,6 @@ img {
     .footer-box {
         display: flex;
         flex-direction: column;
-
-        margin-bottom: 72px;
     }
 
     .footer-text {
@@ -453,7 +455,8 @@ img {
         display: flex;
         flex-wrap: wrap;
 
-        column-gap: 16px;
+        column-gap: 24px;
+        row-gap: 72px;
 
         max-width: 550px;
     }
@@ -467,7 +470,7 @@ img {
 
 
 
-/* hero */
+/* =============================   Hero   =========================== */
 
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -503,7 +506,6 @@ img {
 
 @media screen and (min-width: 768px) {
     .hero {
-        min-width: 768px;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url('../images/background-img/tablet/hero-768.jpg');
 
@@ -522,11 +524,10 @@ img {
 
 @media screen and (min-width: 1158px) {
     .hero {
-        min-width: 1158px;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url('../images/background-img/desctop/hero-1158.jpg');
        
-        max-width: 1158px;
+        max-width: 1440px;
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -563,7 +564,7 @@ img {
     cursor: pointer;
     border: none;
 
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background var(--transition);
 }
 
 .hero-btn:hover,
@@ -571,7 +572,7 @@ img {
     background: var(--primary-focus-hover-clr);
 }
 
-/* Features */
+/* ===============================   Features   ============================ */
 
 .icon-box {
     margin-bottom: 8px;
@@ -614,7 +615,7 @@ img {
 
 
 
-/* work options */
+/* ======================================   Work options   ====================================== */
 
 @media screen and (max-width: 1157px) {
     .features-text{
@@ -629,7 +630,7 @@ img {
 
 
 
-/* team */
+/* =================================   Team   ============================== */
 
 .team {
     background-color: var(--lingt-bg-clr);
@@ -655,7 +656,7 @@ img {
 
     background: var(--primary-inverted-bg-clr);
 
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--transition);
 }
 
 .team-item:hover,
@@ -702,9 +703,7 @@ img {
 
 
 
-/* customers */
-
-.customers {}
+/* =======================================   Customers   ==================================== */
 
 .customers-title {
     margin-bottom: 72px;
@@ -731,6 +730,13 @@ img {
 
 .customers-item {
     height: 88px;
+}
+
+@media screen and (max-width: 427px){
+    .customers-item{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .customers-link {
@@ -761,7 +767,7 @@ img {
 
 
 
-/* Modal window */
+/* ====================================   Modal window   =================================== */
 
 .backdrop {
     position: fixed;
@@ -775,8 +781,8 @@ img {
 
     opacity: 1;
 
-    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 230ms,
-        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 230ms;
+    transition: visibility var(--transition) 230ms,
+        opacity var(--transition) 230ms;
 }
 
 .backdrop.is-hidden {
@@ -808,7 +814,7 @@ img {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: transform var(--transition);
 }
 
 @media screen and (max-width: 1157px){
@@ -834,9 +840,6 @@ img {
     color: var(--primary-text-dark-clr);
 }
 
-.application {}
-
-
 .application-field {
     position: relative;
     display: flex;
@@ -858,7 +861,7 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--transition);
 }
 
 .application-input:hover,
@@ -879,8 +882,8 @@ img {
 
     color: var(--subtle-text-clr);
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition),
+        color var(--transition);
 }
 
 .application-input:focus+.application-lable,
@@ -905,8 +908,8 @@ img {
 
     color: var(--subtle-text-clr);
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition),
+        color var(--transition);
 }
 
 .input-icon {
@@ -915,7 +918,7 @@ img {
     left: 16px;
     transform: translateY(-50%);
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition);
 }
 
 .application-input:focus+.application-lable-comment,
@@ -988,8 +991,8 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--transition),
+        background-color var(--transition);
 }
 
 .checkbox-policity:checked+.check-icon {
@@ -1019,7 +1022,7 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: var(--primary-border-radius);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition);
 }
 
 .application-btn:hover,
@@ -1031,11 +1034,11 @@ img {
 
 
 
-/* Portfolio page */
+/* ===================================   Portfolio page   ================================== */
 
 
 
-/* filters */
+/* ==============================   Filters   ============================= */
 
 .btn-filters-list {
     display: flex;
@@ -1063,10 +1066,10 @@ img {
     border: 1px solid var(--accent-clr);
     border-radius: 4px;
 
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition),
+        color var(--transition);
 }
 
 .filters-btn:hover,
@@ -1084,7 +1087,7 @@ img {
 
 
 
-/* Filters list */
+/* ===================================   Filters list   ================================== */
 
 .filters-list {
     display: flex;
@@ -1094,7 +1097,7 @@ img {
 .filters-item>.link {
     display: block;
 
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--transition);
 }
 
 .filters-item>.link:hover,
@@ -1122,7 +1125,7 @@ img {
 
     background-color: var(--primary-brand-clr);
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition);
 }
 
 .overflow-text {
@@ -1137,7 +1140,7 @@ img {
 
     color: var(--secondary--inverted-text-clr);
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+    transition: opacity var(--transition);
 }
 
 .link:hover .overflow-box,
@@ -1184,11 +1187,11 @@ img {
 
 
 
-/* Adaptive mobile */
+/* ====================================   Adaptive mobile   ==================================== */
 
 
 
-/* header */
+/* ====================================   Header   ==================================== */
 @media screen and (max-width: 767px) {
     
     .page-nav {
@@ -1196,21 +1199,23 @@ img {
     }
 
     .menu {
+        display: flex;
+        flex-direction: column;
+
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         padding-top: 80px;
-        padding-bottom: 80px;
         padding-left: 40px;
         padding-right: 40px;
-        background-color: var(--primary-inverted-bg-clr);
-
-        overflow: scroll;
         
+        background-color: var(--primary-inverted-bg-clr);
+      
+
         transform: translateX(100%);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+        transition: transform var(--transition) 200ms;
     }
 
     .menu.is-open{
@@ -1218,29 +1223,30 @@ img {
     }
 
     .menu-list {
-        margin-bottom: 284px;
+        margin-bottom: auto;
     }
 
     .menu-item {
-        text-align: center;
+        margin-bottom: 40px;
+
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
     }
 
-    .menu-item:not(:last-child) {
-        padding-bottom: 40px;
+    .address{
+        margin: 0;
     }
 
     .address-item {
-        padding-bottom: 40px;
+        margin-bottom: 40px;
 
         text-align: center;
     }
 
     .address-item:last-child {
-        padding-bottom: 48px;
+        margin-bottom: 48px;
     }
 
     .address .social-link-list {
@@ -1255,10 +1261,16 @@ img {
         text-transform: capitalize;
     }
 
+    .footer .container{
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+    }
 
 
 
-    /* hero */
+
+    /* ======================================   Hero   ================================ */
 
     .hero.section {
         padding: 0;
@@ -1277,7 +1289,7 @@ img {
 
 
 
-    /* features */
+    /* ====================================   Features   =============================== */
 
     .features-item:not(:last-child) {
         margin-bottom: 72px;
@@ -1289,7 +1301,7 @@ img {
 
 
 
-    /* team */
+    /* =======================================   Team   ================================== */
 
     .team-item {
         margin-left: auto;
@@ -1302,19 +1314,19 @@ img {
 
 
 
-    /* customers */
+    /* =======================================   Customers   ==================================== */
 
     .customers-list{
         column-gap: 16px;
     }
 
     .customers-item {
-        width: 190px;
+       width: 190px;
     }
 
 
 
-    /* portfolio adaptive */
+    /* ===================================   Portfolio adaptive   ====================================== */
 
     .filters.section {
         padding: 48px 0;
@@ -1341,7 +1353,7 @@ img {
 }
 
 
-/* Adaptive tablet */
+/* ==================================   Adaptive tablet   ====================================== */
 
 @media screen and (min-width: 768px) {
     .page-header .container {
@@ -1383,7 +1395,7 @@ img {
         font-weight: 500;
         letter-spacing: 0.02em;
 
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color var(--transition);
     }
 
     .menu-link:hover,
@@ -1404,8 +1416,8 @@ img {
 
         border-radius: 2px;
 
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color var(--transition),
+            opacity var(--transition);
     }
 
     .menu-link:hover::after,
@@ -1438,16 +1450,9 @@ img {
         align-items: center;
     }
 
-    .contact {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-    }
 
 
-
-    /* hero */
+    /* =====================================   Hero   ==================================== */
 
     .hero-title {
         width: 496px;
@@ -1463,15 +1468,19 @@ img {
 
 
 
-    /* features */
+    /* ======================================   Features   ====================================== */
 
     .features-list {
         display: flex;
     }
 
+    .features-item{
+        width: 356px;
+    }
 
 
-    /* team */
+
+    /* =========================================   Team   ========================================= */
 
     .team-list {
         display: flex;
@@ -1488,7 +1497,7 @@ img {
 
 
 
-    /* customers */
+    /* ======================================   Customers   ================================= */
 
     .customers-list{
    justify-content: center;
@@ -1502,7 +1511,7 @@ img {
 
 
 
-    /* portfolio page */
+    /* =====================================   Portfolio page   ================================ */
 
     .btn-filters-list{
         margin-bottom: 64px;
@@ -1547,26 +1556,36 @@ img {
         column-gap: 24px;
         row-gap: 72px;
     }
+
+    .contact {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+    }
+
+    .filters.section {
+        padding: 64px 0;
+    }
 }
 
 
 
 
 
-/* Adaptive desktop */
+/* =======================================   Adaptive desktop   ======================================== */
 
 @media screen and (min-width: 1158px) {
 
 
-    /*header  */
+    /* ===================================   Header   ======================================  */
 
     .menu {
         margin-left: 76px;
-        justify-content: space-between;
     }
 
     .current::after {
-        top: 43px;
+        top: 45px;
     }
 
     .address{
@@ -1589,7 +1608,7 @@ img {
 
 
 
-    /* footer */
+    /* ==========================================   Footer   ================================= */
 
     .footer {
         padding-top: 100px;
@@ -1618,7 +1637,7 @@ img {
 
 
 
-    /* hero */
+    /* ===========================================   Hero   ====================================== */
 
     .hero {
         padding-top: 188px;
@@ -1627,7 +1646,7 @@ img {
 
 
 
-    /* features */
+    /* ========================================   Features   ================================ */
 
     .features-list {
         gap: 24px;
@@ -1649,7 +1668,7 @@ img {
 
 
     
-    /* work options */
+    /* =====================================   Work options   =============================== */
 
     .work {
         padding-top: 0;
@@ -1681,5 +1700,9 @@ img {
     .option-item>img {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .filters.section {
+        padding: 100px 0;
     }
 }
