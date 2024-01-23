@@ -11,4 +11,19 @@
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
-})();
+// })();
+
+// (() => {
+//   const refs = {
+//     frontImg: document.querySelector("[data-modal]"),
+//   };
+
+//   refs.closeFrontImg.addEventListener("click", toggleFrontImg);
+
+//   function toggleFrontImg() {
+//     refs.frontImg.classList.toggle("front-is-hidden");
+//   }
+// })();
+
+
+// [data-modal] кинути після класів самої картинки
